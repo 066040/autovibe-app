@@ -1,0 +1,129 @@
+{
+  "@@locale": "tr",
+
+  "appName": "AutoNews",
+  "appTitle": "AutoNews",
+  "authTagline": "Otomobil dünyası, tek akışta.",
+
+  "loginTitle": "Giriş Yap",
+  "registerTitle": "Kayıt Ol",
+  "verifyEmailTitle": "E-postanı Doğrula",
+  "forgotTitle": "Şifremi Unuttum",
+
+  "emailLabel": "E-posta",
+  "passwordLabel": "Şifre",
+  "nameLabel": "Ad Soyad",
+
+  "loginBtn": "Giriş",
+  "registerBtn": "Hesap Oluştur",
+  "forgotCta": "Şifreni mi unuttun?",
+  "goToRegister": "Kayıt ol",
+  "goToLogin": "Giriş yap",
+  "noAccount": "Hesabın yok mu?",
+  "haveAccount": "Zaten hesabın var mı?",
+
+  "refresh": "Yenile",
+  "feedLoadFailedTitle": "Yüklenemedi",
+  "tryAgain": "Tekrar dene",
+  "noContentYet": "Henüz içerik yok.",
+
+  "sendCode": "Kod Gönder",
+  "verify": "Doğrula",
+  "resendCode": "Kodu tekrar gönder",
+  "resendCodeWithSeconds": "Tekrar gönder ({seconds}s)",
+  "@resendCodeWithSeconds": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+
+  "codeLabel": "Doğrulama Kodu",
+  "codeEnter": "Kodu gir.",
+
+  "newPassword": "Yeni Şifre",
+  "confirmNewPassword": "Yeni Şifre (Tekrar)",
+  "resetPassword": "Şifreyi Sıfırla",
+
+  "or": "veya",
+
+  "requiredField": "Bu alan zorunlu.",
+  "invalidEmail": "Geçerli bir e-posta gir.",
+  "passwordMin": "Şifre en az 6 karakter olmalı.",
+  "passwordMismatch": "Şifreler eşleşmiyor.",
+  "networkError": "Bağlantı hatası. Tekrar dene.",
+
+  "successLogin": "Giriş başarılı.",
+  "successRegister": "Kayıt başarılı. E-postanı doğrula.",
+  "successCodeSent": "Kod e-postana gönderildi.",
+  "successPasswordReset": "Şifren güncellendi.",
+  "emailVerifiedToast": "E-posta doğrulandı ✅",
+
+  "copyright": "© {year} AutoNews",
+  "@copyright": {
+    "placeholders": {
+      "year": { "type": "int" }
+    }
+  },
+  "profileDefaultName": "AutoNews Kullanıcısı",
+  "profileDefaultBio": "Henüz bio yok.",
+  "saved": "Kaydedilenler",
+  "liked": "Beğenilenler",
+  "grid": "Izgara",
+  "list": "Liste",
+  "noSavedItemsYet": "Henüz kaydedilen yok.",
+  "noLikedItemsYet": "Henüz beğenilen yok.",
+  "emptySavedDesc": "Haberleri kaydettiğinde burada görünecek.",
+  "emptyLikedDesc": "Beğendiğin içerikler burada görünecek.",
+
+  "avatarCropTitle": "Profil Fotoğrafını Kırp",
+  "coverCropTitle": "Kapak Fotoğrafını Kırp",
+  "profileSaved": "Profil kaydedildi.",
+  "editProfileTitle": "Profili Düzenle",
+  "save": "Kaydet",
+  "carNewsAccount": "AutoNews Hesabı",
+
+  "displayName": "Görünen Ad",
+  "displayNameHint": "Örn: Mühendis",
+  "required": "Zorunlu",
+  "about": "Hakkında",
+  "aboutHint": "Kendinden kısaca bahset",
+  "website": "Web sitesi",
+
+  "role": "Rol",
+  "reader": "Okuyucu",
+  "journalist": "Gazeteci",
+  "publisher": "Yayıncı",
+
+  "avatarPath": "Avatar yolu",
+  "coverPath": "Kapak yolu",
+  "saveProfile": "Profili Kaydet",
+  "clearPath": "Yolu Temizle",
+
+  "settings": "Ayarlar",
+  "account": "Hesap",
+  "editProfile": "Profili Düzenle",
+  "editProfileSubtitle": "Ad, bio, görseller ve rol",
+  "publisherJournalistVerification": "Gazeteci/Yayıncı Doğrulama",
+  "publisherJournalistVerificationSubtitle": "Başvuru ve doğrulama işlemleri",
+
+  "appSection": "Uygulama",
+  "language": "Dil",
+  "chooseAppLanguage": "Uygulama dilini seç",
+  "notifications": "Bildirimler",
+  "notificationsSubtitle": "Bildirim tercihlerini yönet",
+
+  "aboutSection": "Hakkında",
+  "privacy": "Gizlilik",
+  "privacySubtitle": "Gizlilik politikası",
+  "terms": "Şartlar",
+  "termsSubtitle": "Kullanım şartları",
+  "aboutCarNews": "AutoNews Hakkında",
+  "aboutCarNewsSubtitle": "Sürüm ve uygulama bilgileri",
+
+  "logout": "Çıkış Yap",
+  "logoutSubtitle": "Hesabından çıkış yap",
+  "logoutConfirmTitle": "Çıkış yapılsın mı?",
+  "logoutConfirmBody": "Hesabından çıkış yapmak üzeresin.",
+  "cancel": "İptal"
+
+}

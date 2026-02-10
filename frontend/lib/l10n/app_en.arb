@@ -1,0 +1,129 @@
+{
+  "@@locale": "en",
+
+  "appName": "AutoNews",
+  "appTitle": "AutoNews",
+  "authTagline": "All automotive news in one feed.",
+
+  "loginTitle": "Sign In",
+  "registerTitle": "Create Account",
+  "verifyEmailTitle": "Verify Your Email",
+  "forgotTitle": "Forgot Password",
+
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "nameLabel": "Full Name",
+
+  "loginBtn": "Sign In",
+  "registerBtn": "Create",
+  "forgotCta": "Forgot your password?",
+  "goToRegister": "Create one",
+  "goToLogin": "Sign in",
+  "noAccount": "Don’t have an account?",
+  "haveAccount": "Already have an account?",
+
+  "refresh": "Refresh",
+  "feedLoadFailedTitle": "Load failed",
+  "tryAgain": "Try again",
+  "noContentYet": "No content yet.",
+
+  "sendCode": "Send Code",
+  "verify": "Verify",
+  "resendCode": "Resend code",
+  "resendCodeWithSeconds": "Resend ({seconds}s)",
+  "@resendCodeWithSeconds": {
+    "placeholders": {
+      "seconds": { "type": "int" }
+    }
+  },
+
+  "codeLabel": "Verification Code",
+  "codeEnter": "Enter the code.",
+
+  "newPassword": "New Password",
+  "confirmNewPassword": "Confirm Password",
+  "resetPassword": "Reset Password",
+
+  "or": "or",
+
+  "requiredField": "This field is required.",
+  "invalidEmail": "Enter a valid email.",
+  "passwordMin": "Password must be at least 6 characters.",
+  "passwordMismatch": "Passwords do not match.",
+  "networkError": "Network error. Try again.",
+
+  "successLogin": "Signed in successfully.",
+  "successRegister": "Account created. Verify your email.",
+  "successCodeSent": "Code sent to your email.",
+  "successPasswordReset": "Password updated.",
+  "emailVerifiedToast": "Email verified ✅",
+
+  "copyright": "© {year} AutoNews",
+  "@copyright": {
+    "placeholders": {
+      "year": { "type": "int" }
+    }
+  },
+  "profileDefaultName": "AutoNews User",
+  "profileDefaultBio": "No bio yet.",
+  "saved": "Saved",
+  "liked": "Liked",
+  "grid": "Grid",
+  "list": "List",
+  "noSavedItemsYet": "No saved items yet.",
+  "noLikedItemsYet": "No liked items yet.",
+  "emptySavedDesc": "Saved articles will appear here.",
+  "emptyLikedDesc": "Liked items will appear here.",
+
+  "avatarCropTitle": "Crop Avatar",
+  "coverCropTitle": "Crop Cover",
+  "profileSaved": "Profile saved.",
+  "editProfileTitle": "Edit Profile",
+  "save": "Save",
+  "carNewsAccount": "AutoNews Account",
+
+  "displayName": "Display Name",
+  "displayNameHint": "e.g. Engineer",
+  "required": "Required",
+  "about": "About",
+  "aboutHint": "Tell something about you",
+  "website": "Website",
+
+  "role": "Role",
+  "reader": "Reader",
+  "journalist": "Journalist",
+  "publisher": "Publisher",
+
+  "avatarPath": "Avatar path",
+  "coverPath": "Cover path",
+  "saveProfile": "Save Profile",
+  "clearPath": "Clear Path",
+
+  "settings": "Settings",
+  "account": "Account",
+  "editProfile": "Edit Profile",
+  "editProfileSubtitle": "Name, bio, images and role",
+  "publisherJournalistVerification": "Journalist/Publisher Verification",
+  "publisherJournalistVerificationSubtitle": "Apply and verification steps",
+
+  "appSection": "App",
+  "language": "Language",
+  "chooseAppLanguage": "Choose app language",
+  "notifications": "Notifications",
+  "notificationsSubtitle": "Manage notification preferences",
+
+  "aboutSection": "About",
+  "privacy": "Privacy",
+  "privacySubtitle": "Privacy policy",
+  "terms": "Terms",
+  "termsSubtitle": "Terms of service",
+  "aboutCarNews": "About AutoNews",
+  "aboutCarNewsSubtitle": "Version and app information",
+
+  "logout": "Log out",
+  "logoutSubtitle": "Sign out of your account",
+  "logoutConfirmTitle": "Log out?",
+  "logoutConfirmBody": "You are about to sign out.",
+  "cancel": "Cancel"
+
+}

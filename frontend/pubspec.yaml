@@ -1,0 +1,59 @@
+name: frontend
+description: "AutoNews Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State / DI
+  flutter_riverpod: ^2.5.1
+
+  # Routing
+  go_router: ^14.6.2
+
+  # Networking
+  dio: ^5.7.0
+  http: ^1.2.2
+
+  # Storage
+  shared_preferences: ^2.3.2
+
+  # Media
+  video_player: ^2.9.2
+
+  # Profile media / files
+  image_picker: ^1.1.2
+  image_cropper: ^8.0.2
+  file_picker: ^8.1.2
+  path_provider: ^2.1.4
+
+  # Localization
+  intl: ^0.20.2
+
+  cupertino_icons: ^1.0.8
+
+  camera: ^0.11.0+2
+  permission_handler: ^12.0.1
+
+  # Basit görsel edit (crop/rotate/filters) için en kolay:
+  image_editor_plus: ^1.0.7
+  
+  google_fonts: ^6.2.1
+  # Video trim vs. istersen sonra ekleriz (ağır):
+  # video_editor: ^3.x
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true

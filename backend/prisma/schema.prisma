@@ -1,0 +1,193 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // url = env("DATABASE_URL")  // sende yoktu, gerekiyorsa açarız
+}
+
+model Source {
+  id        String   @id @default(cuid())
+  name      String
+  type      String
+  url       String   @unique
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  articles    Article[]
+  publisherId String?
+  publisher   Publisher? @relation(fields: [publisherId], references: [id])
+
+  @@index([publisherId])
+  @@index([isActive])
+}
+
+model Article {
+  id          String    @id @default(cuid())
+  sourceId    String
+  title       String
+  url         String    @unique
+  summary     String?
+  imageUrl    String?
+  language    String    @default("en")
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+
+  category    String    @default("Öne Çıkanlar") // ✅ NEW
+
+  commentsCount Int @default(0)
+
+  source   Source    @relation(fields: [sourceId], references: [id])
+  comments Comment[]
+
+  likes Like[]
+  saved Saved[]
+
+  @@index([sourceId])
+  @@index([publishedAt])
+  @@index([createdAt])
+  @@index([category]) // ✅ NEW
+}
+
+model Publisher {
+  id        String   @id @default(cuid())
+  name      String
+  domain    String   @unique
+  token     String   @unique
+  verified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sources Source[]
+}
+
+model User {
+  id            String  @id @default(cuid())
+  email         String  @unique
+  passwordHash  String
+  name          String?
+  emailVerified Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  comments     Comment[]
+  commentLikes CommentLike[]
+
+  // ✅ NEW: reactions
+  likes Like[]
+  saved Saved[]
+
+  @@index([createdAt])
+}
+
+model Comment {
+  id        String        @id @default(cuid())
+  articleId String
+  userId    String
+  parentId  String?
+  text      String
+  status    CommentStatus @default(VISIBLE)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  parent  Comment?  @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies Comment[] @relation("CommentReplies")
+
+  likesCount Int           @default(0)
+  likes      CommentLike[]
+
+  @@index([articleId, createdAt])
+  @@index([parentId, createdAt])
+  @@index([userId, createdAt])
+  @@index([status, createdAt])
+}
+
+model CommentLike {
+  id        String   @id @default(cuid())
+  commentId String
+  userId    String
+  createdAt DateTime @default(now())
+
+  comment Comment @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([commentId, userId])
+  @@index([commentId])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model PasswordResetCode {
+  id        String   @id @default(cuid())
+  email     String
+  code      String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([email, code])
+  @@index([expiresAt])
+  @@index([createdAt])
+}
+
+model EmailVerifyCode {
+  id        String   @id @default(cuid())
+  email     String
+  code      String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([email])
+  @@index([email, code])
+  @@index([expiresAt])
+  @@index([createdAt])
+}
+
+enum CommentStatus {
+  VISIBLE
+  HIDDEN
+  DELETED
+  PENDING
+}
+
+//////////////////////////////////////
+// ✅ NEW MODELS: Like & Saved
+//////////////////////////////////////
+
+model Like {
+  id        String   @id @default(cuid())
+  userId    String
+  articleId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, articleId])
+  @@index([articleId])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model Saved {
+  id        String   @id @default(cuid())
+  userId    String
+  articleId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, articleId])
+  @@index([articleId])
+  @@index([userId])
+  @@index([createdAt])
+}
